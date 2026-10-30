@@ -21,7 +21,7 @@ public class TurnoController {
     public Turno pedirTurno(@RequestBody TurnoRequest request) {
         contador++;
         Turno turno = new Turno(contador, request.getNombre());
-        turnos.offer (turno);
+        turnos.offer(turno);
         return turno;
     }
 
