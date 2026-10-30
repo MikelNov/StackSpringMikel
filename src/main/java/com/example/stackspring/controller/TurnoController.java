@@ -14,7 +14,7 @@ import java.util.Queue;
 @RestController
 @RequestMapping("/turnos")
 public class TurnoController {
-    Queve<Turno> turnos = new LinkedList<>();
+    Queue<Turno> turnos = new LinkedList<>();
     private int contador = 0;
 
     @PostMapping
@@ -26,8 +26,8 @@ public class TurnoController {
     }
 
     @GetMapping("/siguiente")
-    public Turno siguiente() {
-        Turno a = turnos.poll;
+    public String    siguiente() {
+        Turno a = turnos.poll();
 
         return "Se retiro: " + a.getNombre();
     }
